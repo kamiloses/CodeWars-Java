@@ -17,9 +17,9 @@ public class Exercises {
 
 
     //Emotional Sort ( ︶︿︶)
-    public String[] emotionalSort(String[] arr,boolean isAscending) {
+    public String[] emotionalSort(String[] arr, boolean isAscending) {
 
-        Integer[] numbers=new Integer[arr.length];
+        Integer[] numbers = new Integer[arr.length];
         for (int i = 0; i < arr.length; i++) {
             switch (arr[i]) {
                 case ":D":
@@ -43,7 +43,7 @@ public class Exercises {
 
         if (isAscending) {
             Arrays.sort(numbers, Collections.reverseOrder());
-        }else Arrays.sort(numbers);
+        } else Arrays.sort(numbers);
 
 
         for (int i = 0; i < numbers.length; i++) {
@@ -69,4 +69,37 @@ public class Exercises {
         return arr;
 
     }
+
+
+// samogłoska - spółgloska naprzemiennie
+
+
+    public boolean isAlternate(String word) {
+        boolean isAlternate = true;
+        for (int i = 1; i < word.length(); i++) {
+            if ("aeiou".contains(String.valueOf(word.charAt(i - 1)))) {
+                if (!"aeiou".contains(String.valueOf(word.charAt(i)))) {
+                    i ++ ;
+                } else {
+                    isAlternate = false;
+                    break;
+                }
+            } else {
+                if (!"aeiou".contains(String.valueOf(word.charAt(i - 1)))) {
+                    if ("aeiou".contains(String.valueOf(word.charAt(i)))) {
+                        i += 2;
+                    } else {
+                        isAlternate = false;
+                        break;
+                    }
+                }
+
+
+            }
+
+        }
+
+        return isAlternate;
+    }
+
 }

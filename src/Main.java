@@ -5,7 +5,7 @@ public class Main {
 
         Exercises exercises = new Exercises();
 
-         String[] emoticons={":D", ":|", ":)", ":(", ":D"};
-        System.err.println(Arrays.toString(exercises.emotionalSort(emoticons,false)));
+
+        System.out.println(exercises.isAlternate("apple"));
     }
 }
