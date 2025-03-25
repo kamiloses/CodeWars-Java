@@ -79,7 +79,7 @@ public class Exercises {
         for (int i = 1; i < word.length(); i++) {
             if ("aeiou".contains(String.valueOf(word.charAt(i - 1)))) {
                 if (!"aeiou".contains(String.valueOf(word.charAt(i)))) {
-                    i ++ ;
+                    i++;
                 } else {
                     isAlternate = false;
                     break;
@@ -101,5 +101,26 @@ public class Exercises {
 
         return isAlternate;
     }
+
+
+    // convert String to cammel case
+    public String convertToCamelCase(String word) {
+        String toUpper = "";
+        toUpper += word.charAt(0);
+        for (int i = 1; i < word.length(); i++) {
+            if (word.charAt(i-1)=='-') {
+                char c = word.charAt(i);
+                toUpper +=Character.toUpperCase(c);
+
+            } else {
+                toUpper += word.charAt(i);
+            }
+
+        }
+
+
+        return toUpper.replace("-","");
+    }
+
 
 }

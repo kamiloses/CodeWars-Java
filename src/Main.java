@@ -6,6 +6,6 @@ public class Main {
         Exercises exercises = new Exercises();
 
 
-        System.out.println(exercises.isAlternate("apple"));
+        System.out.println(exercises.convertToCamelCase("The-Stealth-Warrior"));
     }
 }
