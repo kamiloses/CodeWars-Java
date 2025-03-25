@@ -6,6 +6,6 @@ public class Main {
         Exercises exercises = new Exercises();
 
 
-        System.out.println(exercises.convertToCamelCase("The-Stealth-Warrior"));
+        System.out.println(Arrays.deepToString(exercises.generateMultiplicationTable(5)));
     }
 }
