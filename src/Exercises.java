@@ -108,9 +108,9 @@ public class Exercises {
         String toUpper = "";
         toUpper += word.charAt(0);
         for (int i = 1; i < word.length(); i++) {
-            if (word.charAt(i-1)=='-') {
+            if (word.charAt(i - 1) == '-') {
                 char c = word.charAt(i);
-                toUpper +=Character.toUpperCase(c);
+                toUpper += Character.toUpperCase(c);
 
             } else {
                 toUpper += word.charAt(i);
@@ -119,9 +119,8 @@ public class Exercises {
         }
 
 
-        return toUpper.replace("-","");
+        return toUpper.replace("-", "");
     }
-
 
 
     public int[][] generateMultiplicationTable(int size) {
@@ -129,19 +128,31 @@ public class Exercises {
 
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
-                matrix[i][j]=(i+1)*(j+1);
+                matrix[i][j] = (i + 1) * (j + 1);
             }
         }
-return matrix;
+        return matrix;
     }
 
+    //odwórcone słowo w zdaniu jeżeli powyżej 5 liter
+    public static String reverseWords(String sentence) {
+        String[] words = sentence.split(" ");
+
+        String finalResult = "";
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].length() >= 5) {
+
+                StringBuilder reversed =new StringBuilder(words[i]).reverse();
+
+                finalResult += " " + reversed;
+            } else {
+                finalResult += " " + words[i];
+            }
 
 
-
-
-
-
-
+        }
+        return finalResult.trim();
+    }
 
 
 }

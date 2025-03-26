@@ -6,6 +6,6 @@ public class Main {
         Exercises exercises = new Exercises();
 
 
-        System.out.println(Arrays.deepToString(exercises.generateMultiplicationTable(5)));
+        System.out.println(exercises.reverseWords("Hey fellow warriors"));
     }
 }
