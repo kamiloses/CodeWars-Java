@@ -5,7 +5,8 @@ public class Main {
 
         Exercises exercises = new Exercises();
 
-
-        System.out.println(exercises.reverseWords("Hey fellow warriors"));
+         int[] a={1, 2, 2, 2, 3,3};
+         int[] b={2};
+        System.out.println(exercises.difference(a,b));
     }
 }

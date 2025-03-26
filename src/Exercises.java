@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
 
 public class Exercises {
 
@@ -154,5 +155,18 @@ public class Exercises {
         return finalResult.trim();
     }
 
+
+
+    //7) róznica między tablicami
+     public HashSet<Integer> difference(int[] a, int[] b){
+         HashSet<Integer> difference = new HashSet<>();
+         for (int i = 0; i <a.length ; i++) {
+             for (int j = 0; j <b.length ; j++) {
+                 if (b[j]!=a[i])difference.add(a[i]);
+
+             }
+         }
+
+     return difference;}
 
 }
