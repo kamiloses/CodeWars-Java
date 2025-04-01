@@ -7,6 +7,6 @@ public class Main {
 
          int[] a={1, 2, 2, 2, 3,3};
          int[] b={2};
-        System.out.println(exercises.difference(a,b));
+        System.out.println(exercises.duplicates("indivisibility"));
     }
 }

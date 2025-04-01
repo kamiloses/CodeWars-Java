@@ -169,4 +169,30 @@ public class Exercises {
 
      return difference;}
 
+
+
+
+
+//8)liczenie duplikatów
+public int duplicates(String word) {
+    String[] wordSplit = word.toLowerCase().split("");
+    int count = 0;
+    String duplicatedletters = "";
+
+    for (int i = 0; i < wordSplit.length - 1; i++) {
+        if (duplicatedletters.contains(wordSplit[i])) {
+            continue;
+        }
+        for (int j = i + 1; j < wordSplit.length; j++) {
+            if (wordSplit[i].equals(wordSplit[j])) {
+                count++;
+                duplicatedletters += wordSplit[i];
+                break;
+            }
+        }
+    }
+    return count;
 }
+    //https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1
+}
+
