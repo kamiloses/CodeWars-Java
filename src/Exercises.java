@@ -209,12 +209,37 @@ public class Exercises {
     }
 
 
-//9)fibonacci
+//10)fibonacci
+public static int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+    public  int[] fibonacciArray(int n) {
+        if (n <= 0) {
+            return new int[0];
+        }
 
+        int[] fib = new int[n];
+        fib[0] = 0;
 
-    //10 bubble sort
+        if (n > 1) {
+            fib[1] = 1;
+        }
+
+        for (int i = 2; i < n; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+
+        return fib;
+    }
 
 
 }
+
+
+//10 bubble sort
+
 
 
