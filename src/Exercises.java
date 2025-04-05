@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 
 public class Exercises {
 
@@ -143,7 +144,7 @@ public class Exercises {
         for (int i = 0; i < words.length; i++) {
             if (words[i].length() >= 5) {
 
-                StringBuilder reversed =new StringBuilder(words[i]).reverse();
+                StringBuilder reversed = new StringBuilder(words[i]).reverse();
 
                 finalResult += " " + reversed;
             } else {
@@ -156,43 +157,64 @@ public class Exercises {
     }
 
 
-
     //7) róznica między tablicami
-     public HashSet<Integer> difference(int[] a, int[] b){
-         HashSet<Integer> difference = new HashSet<>();
-         for (int i = 0; i <a.length ; i++) {
-             for (int j = 0; j <b.length ; j++) {
-                 if (b[j]!=a[i])difference.add(a[i]);
+    public HashSet<Integer> difference(int[] a, int[] b) {
+        HashSet<Integer> difference = new HashSet<>();
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < b.length; j++) {
+                if (b[j] != a[i]) difference.add(a[i]);
 
-             }
-         }
-
-     return difference;}
-
-
-
-
-
-//8)liczenie duplikatów
-public int duplicates(String word) {
-    String[] wordSplit = word.toLowerCase().split("");
-    int count = 0;
-    String duplicatedletters = "";
-
-    for (int i = 0; i < wordSplit.length - 1; i++) {
-        if (duplicatedletters.contains(wordSplit[i])) {
-            continue;
-        }
-        for (int j = i + 1; j < wordSplit.length; j++) {
-            if (wordSplit[i].equals(wordSplit[j])) {
-                count++;
-                duplicatedletters += wordSplit[i];
-                break;
             }
         }
+
+        return difference;
     }
-    return count;
-}
+
+
+    //8)liczenie duplikatów
+    public int duplicates(String word) {
+        String[] wordSplit = word.toLowerCase().split("");
+        int count = 0;
+        String duplicatedletters = "";
+
+        for (int i = 0; i < wordSplit.length - 1; i++) {
+            if (duplicatedletters.contains(wordSplit[i])) {
+                continue;
+            }
+            for (int j = i + 1; j < wordSplit.length; j++) {
+                if (wordSplit[i].equals(wordSplit[j])) {
+                    count++;
+                    duplicatedletters += wordSplit[i];
+                    break;
+                }
+            }
+        }
+        return count;
+    }
     //https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1
+
+
+//9 reversed list
+
+    public List<String> reverseList(List<String> list) {
+        for (int i = 0, j = list.size() - 1; i < j; i++, j--) {
+            String temp = list.get(i);
+            list.set(i, list.get(j));
+            list.set(j,temp);
+
+        }
+
+
+        return list;
+    }
+
+
+//9)fibonacci
+
+
+    //10 bubble sort
+
+
 }
+
 

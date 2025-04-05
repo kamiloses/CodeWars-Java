@@ -1,12 +1,15 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
         Exercises exercises = new Exercises();
-
-         int[] a={1, 2, 2, 2, 3,3};
-         int[] b={2};
-        System.out.println(exercises.duplicates("indivisibility"));
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("A");
+        strings.add("B");
+        strings.add("C");
+        System.out.println(exercises.reverseList(strings));
     }
 }
