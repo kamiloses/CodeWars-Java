@@ -200,7 +200,7 @@ public class Exercises {
         for (int i = 0, j = list.size() - 1; i < j; i++, j--) {
             String temp = list.get(i);
             list.set(i, list.get(j));
-            list.set(j,temp);
+            list.set(j, temp);
 
         }
 
@@ -209,14 +209,15 @@ public class Exercises {
     }
 
 
-//10)fibonacci
-public static int fibonacci(int n) {
-    if (n <= 1) {
-        return n;
+    //10)fibonacci
+    public static int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        }
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
-    return fibonacci(n - 1) + fibonacci(n - 2);
-}
-    public  int[] fibonacciArray(int n) {
+
+    public int[] fibonacciArray(int n) {
         if (n <= 0) {
             return new int[0];
         }
@@ -235,10 +236,24 @@ public static int fibonacci(int n) {
         return fib;
     }
 
+    //10 isPrime
 
+    public boolean isPrime(int number) {
+        boolean isPrime = false;
+        if (number == 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                isPrime=false;
+                break;}
+             else isPrime=true;}
+
+
+
+return isPrime;}
 }
-
-
 //10 bubble sort
 
 
