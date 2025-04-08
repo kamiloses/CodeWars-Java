@@ -244,7 +244,7 @@ public class Exercises {
             return false;
         }
 
-        for (int i = 2; i <= Math.sqrt(number); i++) {
+        for (int i = 2; i <= number/2; i++) {
             if (number % i == 0) {
                 isPrime=false;
                 break;}
