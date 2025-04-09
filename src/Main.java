@@ -7,6 +7,6 @@ public class Main {
 
         Exercises exercises = new Exercises();
         int[] a= {1,3,7, 2, 5, 10, 1};
-        System.err.println(exercises.findIndexWithMaxNeighborSum(a));
+        System.err.println(exercises.sortingLetters("egfgabcdf"));
     }
 }

@@ -244,46 +244,63 @@ public class Exercises {
             return false;
         }
 
-        for (int i = 2; i <= number/2; i++) {
+        for (int i = 2; i <= number / 2; i++) {
             if (number % i == 0) {
-                isPrime=false;
-                break;}
-             else isPrime=true;}
+                isPrime = false;
+                break;
+            } else isPrime = true;
+        }
 
 
-
-return isPrime;}
-
-
-//11
- public int[] toAsciiValues(String input){
-     String modifiedInput = input.replaceAll("\\s+", "");
-     int[] ascii=new int[modifiedInput.length()];
-     for (int i = 0; i <modifiedInput.length() ; i++) {
-      ascii[i]=modifiedInput.charAt(i);
-     }
-return ascii;
-
-
-
- }
-//12
-public int findIndexWithMaxNeighborSum(int[] numbers){
-   int result=0;
-    for (int i = 1; i <numbers.length-1 ; i++) {
-        int temp=numbers[i-1]+numbers[i]+numbers[i+1];
-        if (result<temp){
-        result=temp;}
+        return isPrime;
     }
 
 
-return result;}
+    //11
+    public int[] toAsciiValues(String input) {
+        String modifiedInput = input.replaceAll("\\s+", "");
+        int[] ascii = new int[modifiedInput.length()];
+        for (int i = 0; i < modifiedInput.length(); i++) {
+            ascii[i] = modifiedInput.charAt(i);
+        }
+        return ascii;
 
 
+    }
 
+    //12
+    public int findIndexWithMaxNeighborSum(int[] numbers) {
+        int result = 0;
+        for (int i = 1; i < numbers.length - 1; i++) {
+            int temp = numbers[i - 1] + numbers[i] + numbers[i + 1];
+            if (result < temp) {
+                result = temp;
+            }
+        }
+
+
+        return result;
+    }
+
+//13
+    public String sortingLetters(String wordAsString) {
+        char[] word = wordAsString.toCharArray();
+        for (int i = 0; i < word.length-1; i++)
+            for (int j = i+1; j <word.length; j++) {
+              if (word[j]<word[i]){
+                 char temp=word[i];
+                 word[i]=word[j];
+                 word[j]=temp;
+
+              }
+            }
+    return Arrays.toString(word);}
 
 
 }
+
+
+
 
 //10 bubble sort
 
