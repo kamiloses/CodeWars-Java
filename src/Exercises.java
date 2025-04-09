@@ -253,7 +253,29 @@ public class Exercises {
 
 
 return isPrime;}
+
+
+//11
+ public int[] toAsciiValues(String input){
+     String modifiedInput = input.replaceAll("\\s+", "");
+     int[] ascii=new int[modifiedInput.length()];
+     for (int i = 0; i <modifiedInput.length() ; i++) {
+      ascii[i]=modifiedInput.charAt(i);
+     }
+return ascii;
+
+
+
+ }
+
+
+
+
+
+
+
 }
+
 //10 bubble sort
 
 
