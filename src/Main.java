@@ -6,10 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         Exercises exercises = new Exercises();
-        ArrayList<String> strings = new ArrayList<>();
-        strings.add("A");
-        strings.add("B");
-        strings.add("C");
-        System.out.println(exercises.reverseList(strings));
+        int[] a= {1,3,7, 2, 5, 10, 1};
+        System.err.println(exercises.findIndexWithMaxNeighborSum(a));
     }
 }

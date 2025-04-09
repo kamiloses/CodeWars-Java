@@ -267,8 +267,17 @@ return ascii;
 
 
  }
+//12
+public int findIndexWithMaxNeighborSum(int[] numbers){
+   int result=0;
+    for (int i = 1; i <numbers.length-1 ; i++) {
+        int temp=numbers[i-1]+numbers[i]+numbers[i+1];
+        if (result<temp){
+        result=temp;}
+    }
 
 
+return result;}
 
 
 
