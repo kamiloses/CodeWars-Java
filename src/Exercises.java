@@ -282,25 +282,36 @@ public class Exercises {
         return result;
     }
 
-//13
+    //13
     public String sortingLetters(String wordAsString) {
         char[] word = wordAsString.toCharArray();
-        for (int i = 0; i < word.length-1; i++)
-            for (int j = i+1; j <word.length; j++) {
-              if (word[j]<word[i]){
-                 char temp=word[i];
-                 word[i]=word[j];
-                 word[j]=temp;
+        for (int i = 0; i < word.length - 1; i++)
+            for (int j = i + 1; j < word.length; j++) {
+                if (word[j] < word[i]) {
+                    char temp = word[i];
+                    word[i] = word[j];
+                    word[j] = temp;
 
-              }
+                }
             }
-    return Arrays.toString(word);}
+        return Arrays.toString(word);
+    }
+
+
+    //13
+    private long fibonacci(long n){
+         if (n<=1)return n;
+
+
+        return (fibonacci(n-1)+fibonacci(n-2));
+    }
+
+
+
+
 
 
 }
-
-
-
 
 //10 bubble sort
 
