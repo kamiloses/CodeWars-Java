@@ -1,7 +1,4 @@
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class Exercises {
 
@@ -307,6 +304,21 @@ public class Exercises {
     }
 
 
+    //14
+    public List<Long> generateFibonacciSequence(int count) {
+        List<Long> result = new ArrayList<>();
+        if (count <= 0) return result;
+
+        long a = 0, b = 1;
+        for (int i = 0; i < count; i++) {
+            result.add(a);
+            long temp = a + b;
+            a = b;
+            b = temp;
+        }
+
+        return result;
+    }
 
 
 
