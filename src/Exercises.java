@@ -367,7 +367,6 @@ public class Exercises {
 
     }///17
     public List<Integer> sortedAndWithoutDuplicates(List<Integer> a){
-
         return a.stream().distinct().sorted().toList();
 
 
@@ -375,8 +374,23 @@ public class Exercises {
 
 
 
+// Zadanie: Znajdź pierwszy niepowtarzający się znak w stringu
 
-}
+    public Character firstUniqChar(String s) {
+        Map<Character, Integer> charCount = new LinkedHashMap<>();
+
+        for (char c : s.toCharArray()) {
+            charCount.put(c, charCount.getOrDefault(c, 0) + 1);
+        }
+
+        for (char c : charCount.keySet()) {
+            if (charCount.get(c) == 1) {
+                return c;
+            }
+        }
+
+        return null;
+    }};
 //10 bubble sort
 
 
