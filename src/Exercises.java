@@ -339,23 +339,39 @@ public class Exercises {
     //15 Napisz metodę, która przyjmuje String i zwraca mapę z liczbą wystąpień każdego znaku.
     Map<Character, Integer> countCharacters(String input) {
         HashMap<Character, Integer> sign = new HashMap<>();
-        for (int i = 0; i <input.length(); i++) {
+        for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
-            if (sign.get(c)==null){
-                sign.put(c,1);
+            if (sign.get(c) == null) {
+                sign.put(c, 1);
+            } else {
+                sign.put(c, sign.get(c) + 1);
+
             }
-            else {
-                sign.put(c,sign.get(c)+1);
+            ;
 
-            };
+        }
 
-  }
+        return sign;
+    }
 
-  return sign;}
+
+    //16
+    public boolean isAnagram(String a,String b){
+        char[] word1 = a.toCharArray();
+        char[] word2 = b.toCharArray();
+       Arrays.sort(word1);
+       Arrays.sort(word2);
+
+       return Arrays.equals(word1,word2);
+
+
+    }
+
+
+
 
 
 }
-
 //10 bubble sort
 
 
