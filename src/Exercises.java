@@ -365,8 +365,13 @@ public class Exercises {
        return Arrays.equals(word1,word2);
 
 
-    }
+    }///17
+    public List<Integer> sortedAndWithoutDuplicates(List<Integer> a){
 
+        return a.stream().distinct().sorted().toList();
+
+
+    }
 
 
 
