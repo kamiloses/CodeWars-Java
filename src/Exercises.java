@@ -405,4 +405,29 @@ public int calculate(int index) {
     return calculate(index - 1) + calculate(index - 2) + calculate(index - 3);
 }//{0,1,2,3,6,11,20,37,68,..}
 
+    public int calculateV2(int index) {
+        if (index < 0) {
+            throw new IllegalArgumentException("Index must be non-negative");
+        }
+
+        if (index == 0) return 0;
+        if (index == 1) return 1;
+        if (index == 2) return 2;
+
+        int a = 0; // S(n-3)
+        int b = 1; // S(n-2)
+        int c = 2; // S(n-1)
+        int current = 0;
+
+        for (int i = 3; i <= index; i++) {
+            current = a + b + c;
+            a = b;
+            b = c;
+            c = current;
+        }
+
+        return current;
+    }
+
+
 }
