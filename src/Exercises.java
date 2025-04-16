@@ -296,11 +296,11 @@ public class Exercises {
 
 
     //13
-    private long fibonacci(long n){
-         if (n<=1)return n;
+    private long fibonacci(long n) {
+        if (n <= 1) return n;
 
 
-        return (fibonacci(n-1)+fibonacci(n-2));
+        return (fibonacci(n - 1) + fibonacci(n - 2));
     }
 
 
@@ -320,7 +320,38 @@ public class Exercises {
         return result;
     }
 
+//Input:
+//A = [[1, 2], [3, 4]]
+//B = [[5, 6], [7, 8]]
+//
+//Output:
+//[[6, 8], [10, 12]]
 
+    //15
+
+//    public int[] sumOfMatrix(int[][] a,int[][] b ){
+//
+//        int[][]  result={a[0][0]+b[0][0]};
+//
+//
+//    }
+
+    //15 Napisz metodę, która przyjmuje String i zwraca mapę z liczbą wystąpień każdego znaku.
+    Map<Character, Integer> countCharacters(String input) {
+        HashMap<Character, Integer> sign = new HashMap<>();
+        for (int i = 0; i <input.length(); i++) {
+            char c = input.charAt(i);
+            if (sign.get(c)==null){
+                sign.put(c,1);
+            }
+            else {
+                sign.put(c,sign.get(c)+1);
+
+            };
+
+  }
+
+  return sign;}
 
 
 }
