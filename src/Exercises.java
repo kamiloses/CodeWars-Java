@@ -356,25 +356,26 @@ public class Exercises {
 
 
     //16
-    public boolean isAnagram(String a,String b){
+    public boolean isAnagram(String a, String b) {
         char[] word1 = a.toCharArray();
         char[] word2 = b.toCharArray();
-       Arrays.sort(word1);
-       Arrays.sort(word2);
+        Arrays.sort(word1);
+        Arrays.sort(word2);
 
-       return Arrays.equals(word1,word2);
+        return Arrays.equals(word1, word2);
 
 
-    }///17
-    public List<Integer> sortedAndWithoutDuplicates(List<Integer> a){
+    }
+
+    /// 17
+    public List<Integer> sortedAndWithoutDuplicates(List<Integer> a) {
         return a.stream().distinct().sorted().toList();
 
 
     }
 
 
-
-// Zadanie: Znajdź pierwszy niepowtarzający się znak w stringu
+//18 Zadanie: Znajdź pierwszy niepowtarzający się znak w stringu
 
     public Character firstUniqChar(String s) {
         Map<Character, Integer> charCount = new LinkedHashMap<>();
@@ -390,8 +391,18 @@ public class Exercises {
         }
 
         return null;
-    }};
+    }
 //10 bubble sort
+public int calculate(int index) {
+    if (index < 0) {
+        throw new IllegalArgumentException("Index must be non-negative");
+    }
 
+    if (index == 0) return 0;
+    if (index == 1) return 1;
+    if (index == 2) return 2;
 
+    return calculate(index - 1) + calculate(index - 2) + calculate(index - 3);
+}//{0,1,2,3,6,11,20,37,68,..}
 
+}
