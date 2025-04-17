@@ -320,21 +320,6 @@ public class Exercises {
         return result;
     }
 
-//Input:
-//A = [[1, 2], [3, 4]]
-//B = [[5, 6], [7, 8]]
-//
-//Output:
-//[[6, 8], [10, 12]]
-
-    //15
-
-//    public int[] sumOfMatrix(int[][] a,int[][] b ){
-//
-//        int[][]  result={a[0][0]+b[0][0]};
-//
-//
-//    }
 
     //15 Napisz metodę, która przyjmuje String i zwraca mapę z liczbą wystąpień każdego znaku.
     Map<Character, Integer> countCharacters(String input) {
@@ -392,18 +377,19 @@ public class Exercises {
 
         return null;
     }
-//10 bubble sort
-public int calculate(int index) {
-    if (index < 0) {
-        throw new IllegalArgumentException("Index must be non-negative");
-    }
 
-    if (index == 0) return 0;
-    if (index == 1) return 1;
-    if (index == 2) return 2;
+    //10 bubble sort
+    public int calculate(int index) {
+        if (index < 0) {
+            throw new IllegalArgumentException("Index must be non-negative");
+        }
 
-    return calculate(index - 1) + calculate(index - 2) + calculate(index - 3);
-}//{0,1,2,3,6,11,20,37,68,..}
+        if (index == 0) return 0;
+        if (index == 1) return 1;
+        if (index == 2) return 2;
+
+        return calculate(index - 1) + calculate(index - 2) + calculate(index - 3);
+    }//{0,1,2,3,6,11,20,37,68,..}
 
     public int calculateV2(int index) {
         if (index < 0) {
@@ -428,6 +414,29 @@ public int calculate(int index) {
 
         return current;
     }
+//Input:
+//A = [[1, 2], [3, 4]]
+//B = [[5, 6], [7, 8]]
+//
+//Output:
+//[[6, 8], [10, 12]]
+
+    //21
+
+    public int sumOfMatrix(int[][] a) {
+        int result = 0;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                result += a[i][j];
+            }
+        }
+
+        return result;
+    }
+
+
+
+
 
 
 }
